@@ -1,3 +1,5 @@
+# Instapic - Download a high res image from an Instagram image src tag
+
 # Install
 
 ```bash

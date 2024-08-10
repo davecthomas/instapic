@@ -26,11 +26,15 @@ def download_image(url, filename):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Extract image URL from HTML img tag, open it in a browser, and download it.")
-    parser.add_argument('html', type=str, help="HTML img tag as a string")
+        description="Extract image URL from HTML img tag.")
+    parser.add_argument('input', type=str,
+                        help="HTML img tag as a string")
     args = parser.parse_args()
 
-    img_url = extract_image_url(args.html)
+    input_data = args.input
+
+    # Assume it's an HTML img tag
+    img_url = extract_image_url(input_data)
     if img_url:
         print(f"Image URL: {img_url}")
         webbrowser.open(img_url)
@@ -45,7 +49,8 @@ def main():
         filename = f"instapic-{date_str}.{file_extension}"
 
         # Get the current user's Downloads directory
-        downloads_folder = os.path.join(os.path.expanduser('~'), 'Downloads')
+        downloads_folder = os.path.join(
+            os.path.expanduser('~'), 'Downloads')
         filepath = os.path.join(downloads_folder, filename)
 
         # Download the image
