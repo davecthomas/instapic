@@ -1,0 +1,9 @@
+{
+  "cwd": "/Users/davidthomas/code/davecthomas/instapic",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "`/Users/davidthomas/code/davecthomas/instapic`",
+  "permission_mode": "acceptEdits",
+  "session_id": "520ae241-19ea-4024-ab06-ad36c2a48853",
+  "stop_hook_active": false,
+  "transcript_path": "/Users/davidthomas/.claude/projects/-Users-davidthomas-code-davecthomas-instapic/520ae241-19ea-4024-ab06-ad36c2a48853.jsonl"
+}
