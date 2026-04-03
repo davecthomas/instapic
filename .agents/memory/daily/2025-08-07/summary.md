@@ -8,7 +8,9 @@ bootstrapped: true
 
 ## Decision candidates
 
-- **auth-model** — Authentication model established: no auth for images (plain requests.get), optional cookie-file passthrough for reels via yt-dlp. No OAuth or credential storage. See `events/auth-model.md`.
+- **yt-dlp-video-backend** — yt-dlp is the canonical video backend for instareel; handles Instagram's rotating session-scoped URLs, concurrent fragment download, and mp4 merging. Promoted → ADR-0002. See `events/yt-dlp-video-backend.md`.
+- **output-directory-divergence** — Output directories differ intentionally: ~/Downloads (hardcoded) for images (feels like a one-off download), ./downloads (configurable) for reels (feels like a project asset). Promoted → ADR-0004. See `events/output-directory-divergence.md`.
+- **auth-model** — Authentication model established: no auth for images (plain requests.get), optional cookie-file passthrough for reels via yt-dlp. No OAuth or credential storage. Promoted → ADR-0005. See `events/auth-model.md`.
 
 ## Commits
 
